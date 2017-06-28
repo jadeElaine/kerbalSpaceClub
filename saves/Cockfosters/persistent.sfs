@@ -13,8 +13,8 @@ GAME
 	flag = Squad/Flags/default
 	launchID = 11
 	modded = True
-	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe  - 
-	versionFull = 1.3.0.1804 (WindowsPlayer x64)
+	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP  - 
+	versionFull = 1.3.0.1804 (OSXPlayer)
 	versionCreated = unknown
 	PARAMETERS
 	{
@@ -84,7 +84,7 @@ GAME
 		}
 		CAREER
 		{
-			TechTreeUrl = GameData\ModuleManager.TechTree
+			TechTreeUrl = GameData/ModuleManager.TechTree
 			StartingFunds = 25000
 			StartingScience = 0
 			StartingReputation = 0
@@ -528,10 +528,18 @@ GAME
 		scene = 7, 8, 5
 		NextSpawnTime = 975930.75370330154
 	}
+	SCENARIO
+	{
+		name = KerbalAlarmClockScenario
+		scene = 5, 6, 7, 8
+		KACAlarmListStorage
+		{
+		}
+	}
 	FLIGHTSTATE
 	{
 		version = 1.3.0
-		UT = 946172.11490421032
+		UT = 946230.15490426437
 		activeVessel = 0
 		mapViewFiltering = 1022
 		commNetUIModeTracking = Network
@@ -59468,20 +59476,28 @@ GAME
 	LoaderInfo
 	{
 		DPAI_RPM v1.0.0.0 = True
-		MiniAVC v1.0.3.0 = True
+		MiniAVC v1.0.3.0 = False
 		ModuleDockingNodeNamed v1.0.0.0 = True
-		000_Toolbar = True
-		MOD-JSI = True
-		MOD-NavyFish = True
-		SteamGauges = True
-		ModuleManager.2.6.3.dll = True
+		000_Toolbar = False
+		MOD-JSI = False
+		MOD-NavyFish = False
+		SteamGauges = False
+		ModuleManager.2.6.3.dll = False
 		ModuleManager.ConfigCache = True
 		ModuleManager.ConfigSHA = True
 		ModuleManager.Physics = True
 		ModuleManager.TechTree = True
-		toolbar-settings.dat = True
-		ModuleManager.2.6.3 v2.6.3.0 = True
-		aaa_Toolbar v1.0.0.0 / v1.7.9.0 = True
+		toolbar-settings.dat = False
+		ModuleManager.2.6.3 v2.6.3.0 = False
+		aaa_Toolbar v1.0.0.0 / v1.7.9.0 = False
+		ModuleManager.2.8.0 v2.8.0.0 = True
+		DockingPortAlignmentIndicator v1.0.0.0 = True
+		MiniAVC v1.0.3.2 = True
+		KerbalAlarmClock v3.8.5.0 = True
+		NavyFish = True
+		TriggerTech = True
+		.DS_Store = True
+		ModuleManager.2.8.0.dll = True
 	}
 	ROSTER
 	{
@@ -59753,7 +59769,7 @@ GAME
 		{
 			name = Ronzor Kerman
 			gender = Male
-			type = Applicant
+			type = Crew
 			trait = Pilot
 			brave = 0.139992341
 			dumb = 0.883075655
@@ -59781,7 +59797,7 @@ GAME
 		{
 			name = Cornard Kerman
 			gender = Male
-			type = Applicant
+			type = Crew
 			trait = Pilot
 			brave = 0.0423548855
 			dumb = 0.434429884
@@ -59809,7 +59825,7 @@ GAME
 		{
 			name = Lola Kerman
 			gender = Female
-			type = Applicant
+			type = Crew
 			trait = Scientist
 			brave = 0.0952295288
 			dumb = 0.618218839
@@ -59837,7 +59853,7 @@ GAME
 		{
 			name = Jotrid Kerman
 			gender = Female
-			type = Applicant
+			type = Crew
 			trait = Pilot
 			brave = 0.435888857
 			dumb = 0.535132766
@@ -59897,7 +59913,7 @@ GAME
 		{
 			name = Lefty Kerman
 			gender = Male
-			type = Applicant
+			type = Crew
 			trait = Engineer
 			brave = 0.201751992
 			dumb = 0.464969575
