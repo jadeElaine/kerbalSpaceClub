@@ -1,6 +1,6 @@
 GAME
 {
-	version = 1.3.1
+	version = 1.4.1
 	Title = per aspera ad astra (SANDBOX)
 	Description = No description available.
 	linkURL = 
@@ -11,10 +11,12 @@ GAME
 	scene = 5
 	editor = None
 	flag = Squad/Flags/minimalistic
-	launchID = 8
+	launchID = 9
+	defaultVABLaunchSite = LaunchPad
+	defaultSPHLaunchSite = Runway
 	modded = True
-	envInfo =  - Environment Info - Unix 7FFFFFFFFFFFFFFF  Args: KSP  - 
-	versionFull = 1.3.1.1891 (OSXPlayer)
+	envInfo =  - Environment Info - Win32NT 7FFFFFFFFFFFFFFF  Args: KSP_x64.exe  - 
+	versionFull = 1.4.1.2089 (WindowsPlayer x64)
 	versionCreated = 1.3.1.1891 (OSXPlayer)
 	PARAMETERS
 	{
@@ -81,10 +83,11 @@ GAME
 			ResourceAbundance = 1
 			ReentryHeatScale = 1
 			EnableCommNet = True
+			AllowOtherLaunchSites = False
 		}
 		CAREER
 		{
-			TechTreeUrl = GameData/ModuleManager.TechTree
+			TechTreeUrl = GameData\ModuleManager.TechTree
 			StartingFunds = 25000
 			StartingScience = 0
 			StartingReputation = 0
@@ -119,6 +122,39 @@ GAME
 			BuildingImpactDamageMult = 0.05
 			PartUpgradesInSandbox = False
 			PartUpgradesInCareer = True
+			PartUpgradesInMission = False
+		}
+		MissionParamsGeneral
+		{
+			enableFunding = True
+			startingFunds = 100000
+			spacer = 
+			enableKerbalLevels = True
+			kerbalLevelPilot = 5
+			kerbalLevelScientist = 5
+			kerbalLevelEngineer = 5
+		}
+		MissionParamsExtras
+		{
+			facilityOpenAC = False
+			astronautHiresAreFree = True
+			spacer = 
+			facilityOpenEditor = False
+			launchSitesOpen = False
+			spacer2 = 
+			cheatsEnabled = False
+		}
+		MissionParamsFacilities
+		{
+			facilityLevelAdmin = 3
+			facilityLevelAC = 3
+			facilityLevelLaunchpad = 3
+			facilityLevelMC = 3
+			facilityLevelRD = 3
+			facilityLevelRunway = 3
+			facilityLevelSPH = 3
+			facilityLevelTS = 3
+			facilityLevelVAB = 3
 		}
 	}
 	SCENARIO
@@ -143,7 +179,7 @@ GAME
 	SCENARIO
 	{
 		name = ResourceScenario
-		scene = 7, 8, 5, 6
+		scene = 7, 8, 5, 6, 21
 		RESOURCE_SETTINGS
 		{
 			GameSeed = 974667655
@@ -281,7 +317,7 @@ GAME
 	SCENARIO
 	{
 		name = ScenarioCustomWaypoints
-		scene = 7, 8
+		scene = 7, 8, 21
 	}
 	SCENARIO
 	{
@@ -513,25 +549,30 @@ GAME
 	}
 	FLIGHTSTATE
 	{
-		version = 1.3.1
-		UT = 5641610.5845663343
-		activeVessel = 0
+		version = 1.4.1
+		UT = 5641621.5445660893
+		activeVessel = 11
 		mapViewFiltering = 2112
 		commNetUIModeTracking = Network
 		commNetUIModeFlight = Path
 		VESSEL
 		{
 			pid = e34f9fc5ca33402dbd998b835a334deb
+			persistentId = 3758807451
 			name = voyager-mk1-1
 			type = Plane
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 3829633.407260586
 			lct = 204.66000000003089
 			lastUT = 3829838.0672605862
+			distanceTraveled = 0
 			root = 0
 			lat = -4.5408056349397867
 			lon = 178.47994931084523
@@ -544,6 +585,8 @@ GAME
 			prst = False
 			ref = 3996831497
 			ctrl = True
+			PQSMin = 0
+			PQSMax = 0
 			cPch = 0.2900001
 			cHdg = -1.064
 			cMod = 0
@@ -564,6 +607,7 @@ GAME
 				cid = 4294777680
 				uid = 3996831497
 				mid = 3430018856
+				persistentId = 2271119652
 				launchID = 3
 				parent = 0
 				position = 0,0,0
@@ -586,6 +630,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -863,6 +908,7 @@ GAME
 				cid = 4294504266
 				uid = 2313403929
 				mid = 3430018856
+				persistentId = 3765434179
 				launchID = 3
 				parent = 0
 				position = 0,-1.875,0
@@ -886,6 +932,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1020,6 +1067,7 @@ GAME
 				cid = 4294564330
 				uid = 3145289435
 				mid = 3430018856
+				persistentId = 2032601616
 				launchID = 3
 				parent = 1
 				position = 0,-4.375,0
@@ -1043,6 +1091,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1091,6 +1140,7 @@ GAME
 				cid = 4294545508
 				uid = 2053957795
 				mid = 3430018856
+				persistentId = 2038580016
 				launchID = 3
 				parent = 2
 				position = 0,-7.1875,0
@@ -1115,6 +1165,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1174,6 +1225,7 @@ GAME
 				cid = 4294531134
 				uid = 2073395970
 				mid = 3430018856
+				persistentId = 2848949197
 				launchID = 3
 				parent = 3
 				position = -0.625,-9.5288295745849609,0
@@ -1198,6 +1250,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1356,6 +1409,7 @@ GAME
 				cid = 4294530262
 				uid = 998468881
 				mid = 3430018856
+				persistentId = 440770887
 				launchID = 3
 				parent = 3
 				position = 0.625,-9.5288295745849609,0
@@ -1380,6 +1434,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1538,6 +1593,7 @@ GAME
 				cid = 4294281850
 				uid = 4092378999
 				mid = 3430018856
+				persistentId = 4232286718
 				launchID = 3
 				parent = 3
 				position = -1.2503812313079834,-7.1863894462585449,7.4505805969238281E-08
@@ -1560,6 +1616,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1615,6 +1672,7 @@ GAME
 				cid = 4294281618
 				uid = 4084326020
 				mid = 3430018856
+				persistentId = 186714900
 				launchID = 3
 				parent = 3
 				position = 1.2503812313079834,-7.1863894462585449,-1.8347054719924927E-07
@@ -1637,6 +1695,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1692,6 +1751,7 @@ GAME
 				cid = 4294219080
 				uid = 1008428952
 				mid = 3430018856
+				persistentId = 2748789048
 				launchID = 3
 				parent = 3
 				position = -0.83323788642883301,-7.1716818809509277,-0.1866089403629303
@@ -1714,6 +1774,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1747,6 +1808,7 @@ GAME
 				cid = 4294218782
 				uid = 3975107895
 				mid = 3430018856
+				persistentId = 1095251403
 				launchID = 3
 				parent = 3
 				position = 0.83323788642883301,-7.1716818809509277,0.18660886585712433
@@ -1769,6 +1831,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1802,6 +1865,7 @@ GAME
 				cid = 4294196754
 				uid = 325201559
 				mid = 3430018856
+				persistentId = 2462222087
 				launchID = 3
 				parent = 3
 				position = 0.88518160581588745,-7.203394889831543,-0.19077441096305847
@@ -1824,6 +1888,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1857,6 +1922,7 @@ GAME
 				cid = 4294196146
 				uid = 3978525924
 				mid = 3430018856
+				persistentId = 3567852797
 				launchID = 3
 				parent = 3
 				position = -0.88518160581588745,-7.203394889831543,0.19077448546886444
@@ -1879,6 +1945,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1912,6 +1979,7 @@ GAME
 				cid = 4294410790
 				uid = 1528251941
 				mid = 3430018856
+				persistentId = 2949147097
 				launchID = 3
 				parent = 2
 				position = 6.3329935073852539E-08,-5.9854040145874023,-0.73334825038909912
@@ -1934,6 +2002,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -1990,6 +2059,7 @@ GAME
 				cid = 4294408662
 				uid = 519513424
 				mid = 3430018856
+				persistentId = 3262357067
 				launchID = 3
 				parent = 2
 				position = 0,-5.9854040145874023,0.73334825038909912
@@ -2012,6 +2082,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2068,6 +2139,7 @@ GAME
 				cid = 4294343722
 				uid = 1596926305
 				mid = 3430018856
+				persistentId = 2156051128
 				launchID = 3
 				parent = 2
 				position = 6.3329935073852539E-08,-3.0168838500976563,-0.78205680847167969
@@ -2089,6 +2161,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2132,6 +2205,7 @@ GAME
 				cid = 4294297274
 				uid = 2860857475
 				mid = 3430018856
+				persistentId = 1460830962
 				launchID = 3
 				parent = 2
 				position = -1.0026930570602417,-5.4047155380249023,-0.26867073774337769
@@ -2154,6 +2228,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2187,6 +2262,7 @@ GAME
 				cid = 4294296582
 				uid = 407663530
 				mid = 3430018856
+				persistentId = 1679088278
 				launchID = 3
 				parent = 2
 				position = 1.0026930570602417,-5.4047155380249023,0.26867064833641052
@@ -2209,6 +2285,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2242,6 +2319,7 @@ GAME
 				cid = 4294294944
 				uid = 2383053888
 				mid = 3430018856
+				persistentId = 4114303913
 				launchID = 3
 				parent = 2
 				position = 1.0160558223724365,-5.387547492980957,-0.27225127816200256
@@ -2264,6 +2342,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2297,6 +2376,7 @@ GAME
 				cid = 4294294698
 				uid = 610347813
 				mid = 3430018856
+				persistentId = 1026095993
 				launchID = 3
 				parent = 2
 				position = -1.0160558223724365,-5.387547492980957,0.27225136756896973
@@ -2319,6 +2399,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2352,6 +2433,7 @@ GAME
 				cid = 4294184358
 				uid = 4123295208
 				mid = 3430018856
+				persistentId = 218829693
 				launchID = 3
 				parent = 2
 				position = 1.3078039884567261,-5.9529266357421875,-0.00074220076203346252
@@ -2374,6 +2456,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2426,6 +2509,7 @@ GAME
 				cid = 4294183974
 				uid = 1301518753
 				mid = 3430018856
+				persistentId = 495600164
 				launchID = 3
 				parent = 2
 				position = -1.3078039884567261,-5.9529266357421875,0.00074231531471014023
@@ -2448,6 +2532,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2500,6 +2585,7 @@ GAME
 				cid = 4294180990
 				uid = 47465051
 				mid = 3430018856
+				persistentId = 1067638890
 				launchID = 3
 				parent = 2
 				position = 0.20850455760955811,-5.3757591247558594,0.77528154850006104
@@ -2522,6 +2608,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2574,6 +2661,7 @@ GAME
 				cid = 4294180030
 				uid = 3020183316
 				mid = 3430018856
+				persistentId = 3294604951
 				launchID = 3
 				parent = 2
 				position = -0.20850463211536407,-5.3757591247558594,-0.77528154850006104
@@ -2596,6 +2684,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2648,6 +2737,7 @@ GAME
 				cid = 4294286584
 				uid = 4257590894
 				mid = 3430018856
+				persistentId = 3320710045
 				launchID = 3
 				parent = 1
 				position = -1.2501153945922852,-1.5126333236694336,7.4505805969238281E-08
@@ -2670,6 +2760,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2725,6 +2816,7 @@ GAME
 				cid = 4294286004
 				uid = 2994285886
 				mid = 3430018856
+				persistentId = 2923578295
 				launchID = 3
 				parent = 1
 				position = 1.2501153945922852,-1.5126333236694336,-1.8347054719924927E-07
@@ -2747,6 +2839,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2802,6 +2895,7 @@ GAME
 				cid = 4294414982
 				uid = 1212888186
 				mid = 3430018856
+				persistentId = 1159511823
 				launchID = 3
 				parent = 0
 				position = 6.5192580223083496E-08,-0.82559871673583984,-0.7396731972694397
@@ -2824,6 +2918,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2880,6 +2975,7 @@ GAME
 				cid = 4294412494
 				uid = 1760664022
 				mid = 3430018856
+				persistentId = 1795876980
 				launchID = 3
 				parent = 0
 				position = 0,-0.82559871673583984,0.7396731972694397
@@ -2902,6 +2998,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -2958,6 +3055,7 @@ GAME
 				cid = 4294182298
 				uid = 663689884
 				mid = 3430018856
+				persistentId = 4196311873
 				launchID = 3
 				parent = 0
 				position = 1.255818247795105,-0.45118331909179688,-0.00074219889938831329
@@ -2980,6 +3078,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3032,6 +3131,7 @@ GAME
 				cid = 4294182106
 				uid = 1382563823
 				mid = 3430018856
+				persistentId = 2287764346
 				launchID = 3
 				parent = 0
 				position = -1.255818247795105,-0.45118331909179688,0.00074230879545211792
@@ -3054,6 +3154,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3106,6 +3207,7 @@ GAME
 				cid = 4294179418
 				uid = 1879783346
 				mid = 3430018856
+				persistentId = 3125203014
 				launchID = 3
 				parent = 0
 				position = -0.00074220262467861176,-0.035892486572265625,-0.79320091009140015
@@ -3128,6 +3230,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3180,6 +3283,7 @@ GAME
 				cid = 4294178458
 				uid = 4273598008
 				mid = 3430018856
+				persistentId = 2486065571
 				launchID = 3
 				parent = 0
 				position = 0.0007422715425491333,-0.035892486572265625,0.79320091009140015
@@ -3202,6 +3306,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3304,16 +3409,21 @@ GAME
 		VESSEL
 		{
 			pid = 0569d65544eb498290d917c10efa645b
+			persistentId = 4281363506
 			name = voyager-mk2-1
 			type = Ship
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 308298.46550209494
 			lct = 3521567.4017585171
 			lastUT = 3829865.8672606121
+			distanceTraveled = 0
 			root = 0
 			lat = 0.040205636328463128
 			lon = -15.338562946690578
@@ -3326,6 +3436,8 @@ GAME
 			prst = False
 			ref = 3609407584
 			ctrl = True
+			PQSMin = 0
+			PQSMax = 0
 			cPch = -0.104
 			cHdg = -0.92
 			cMod = 0
@@ -3346,6 +3458,7 @@ GAME
 				cid = 4294774652
 				uid = 3609407584
 				mid = 325139766
+				persistentId = 302492877
 				launchID = 4
 				parent = 0
 				position = 0,0,0
@@ -3369,6 +3482,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3646,6 +3760,7 @@ GAME
 				cid = 4294731886
 				uid = 3778212883
 				mid = 325139766
+				persistentId = 3902084015
 				launchID = 4
 				parent = 0
 				position = 0,-2.3542404174804688,0
@@ -3669,6 +3784,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3713,6 +3829,7 @@ GAME
 				cid = 4294729804
 				uid = 2486365470
 				mid = 325139766
+				persistentId = 1145881384
 				launchID = 4
 				parent = 1
 				position = 0,-5.1667404174804688,0
@@ -3736,6 +3853,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3780,6 +3898,7 @@ GAME
 				cid = 4294747824
 				uid = 3943862640
 				mid = 325139766
+				persistentId = 514764560
 				launchID = 4
 				parent = 2
 				position = 0,-9.8442401885986328,0
@@ -3803,6 +3922,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -3847,6 +3967,7 @@ GAME
 				cid = 4294721810
 				uid = 3679658653
 				mid = 325139766
+				persistentId = 4240858922
 				launchID = 4
 				parent = 3
 				position = 0,-15.111488342285156,0
@@ -3869,6 +3990,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4032,6 +4154,7 @@ GAME
 				cid = 4294685786
 				uid = 2069472877
 				mid = 325139766
+				persistentId = 1973975521
 				launchID = 4
 				parent = 3
 				position = -2.1429407596588135,-8.7045145034790039,-1.2372277975082397
@@ -4060,6 +4183,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4104,6 +4228,7 @@ GAME
 				cid = 4294675266
 				uid = 2760424621
 				mid = 325139766
+				persistentId = 1786767314
 				launchID = 4
 				parent = 5
 				position = -2.0130167007446289,-6.8508853912353516,-1.1073037385940552
@@ -4130,6 +4255,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4186,6 +4312,7 @@ GAME
 				cid = 4294683646
 				uid = 4150027128
 				mid = 325139766
+				persistentId = 3110719938
 				launchID = 4
 				parent = 3
 				position = -2.1429409980773926,-8.7045145034790039,1.237227201461792
@@ -4214,6 +4341,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4258,6 +4386,7 @@ GAME
 				cid = 4294671740
 				uid = 346050162
 				mid = 325139766
+				persistentId = 4062120145
 				launchID = 4
 				parent = 7
 				position = -1.9654613733291626,-6.8508853912353516,1.1896716356277466
@@ -4284,6 +4413,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4340,6 +4470,7 @@ GAME
 				cid = 4294683606
 				uid = 1184249922
 				mid = 325139766
+				persistentId = 773558921
 				launchID = 4
 				parent = 3
 				position = -4.8428773880004883E-08,-8.7045145034790039,2.4744551181793213
@@ -4368,6 +4499,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4412,6 +4544,7 @@ GAME
 				cid = 4294671644
 				uid = 4174331220
 				mid = 325139766
+				persistentId = 1463212256
 				launchID = 4
 				parent = 9
 				position = 0.047555513679981232,-6.8508853912353516,2.2969753742218018
@@ -4438,6 +4571,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4494,6 +4628,7 @@ GAME
 				cid = 4294683566
 				uid = 2329075058
 				mid = 325139766
+				persistentId = 68215479
 				launchID = 4
 				parent = 3
 				position = 2.1429407596588135,-8.7045145034790039,1.2372275590896606
@@ -4522,6 +4657,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4566,6 +4702,7 @@ GAME
 				cid = 4294671548
 				uid = 555759298
 				mid = 325139766
+				persistentId = 4174331685
 				launchID = 4
 				parent = 11
 				position = 2.0130164623260498,-6.8508853912353516,1.1073033809661865
@@ -4592,6 +4729,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4648,6 +4786,7 @@ GAME
 				cid = 4294683526
 				uid = 1833796166
 				mid = 325139766
+				persistentId = 1979874996
 				launchID = 4
 				parent = 3
 				position = 2.1429412364959717,-8.7045145034790039,-1.2372274398803711
@@ -4676,6 +4815,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4720,6 +4860,7 @@ GAME
 				cid = 4294671452
 				uid = 548475973
 				mid = 325139766
+				persistentId = 3009695467
 				launchID = 4
 				parent = 13
 				position = 1.9654614925384521,-6.8508853912353516,-1.1896718740463257
@@ -4746,6 +4887,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4802,6 +4944,7 @@ GAME
 				cid = 4294683486
 				uid = 4291418633
 				mid = 325139766
+				persistentId = 1075935269
 				launchID = 4
 				parent = 3
 				position = 7.0687383413314819E-07,-8.7045145034790039,-2.4744551181793213
@@ -4830,6 +4973,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4874,6 +5018,7 @@ GAME
 				cid = 4294671356
 				uid = 2409001657
 				mid = 325139766
+				persistentId = 2382160382
 				launchID = 4
 				parent = 15
 				position = -0.047554928809404373,-6.8508853912353516,-2.2969753742218018
@@ -4900,6 +5045,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -4956,6 +5102,7 @@ GAME
 				cid = 4294679034
 				uid = 876301262
 				mid = 325139766
+				persistentId = 2151167297
 				launchID = 4
 				parent = 3
 				position = -2.1459424495697021,-12.711899757385254,-1.2389606237411499
@@ -4984,6 +5131,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5028,6 +5176,7 @@ GAME
 				cid = 4294670150
 				uid = 1295601392
 				mid = 325139766
+				persistentId = 3951912845
 				launchID = 4
 				parent = 17
 				position = -2.7554574012756348,-11.02778434753418,-1.4022798538208008
@@ -5054,6 +5203,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5110,6 +5260,7 @@ GAME
 				cid = 4294677694
 				uid = 3943209091
 				mid = 325139766
+				persistentId = 61366847
 				launchID = 4
 				parent = 3
 				position = -2.1459426879882813,-12.711899757385254,1.2389603853225708
@@ -5138,6 +5289,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5182,6 +5334,7 @@ GAME
 				cid = 4294668104
 				uid = 2070704039
 				mid = 325139766
+				persistentId = 3049248429
 				launchID = 4
 				parent = 19
 				position = -2.5921387672424316,-11.02778434753418,1.6851562261581421
@@ -5208,6 +5361,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5264,6 +5418,7 @@ GAME
 				cid = 4294677654
 				uid = 625637014
 				mid = 325139766
+				persistentId = 2365544344
 				launchID = 4
 				parent = 3
 				position = 1.2526288628578186E-07,-12.711899757385254,2.4779210090637207
@@ -5292,6 +5447,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5336,6 +5492,7 @@ GAME
 				cid = 4294668008
 				uid = 3200740101
 				mid = 325139766
+				persistentId = 1554280084
 				launchID = 4
 				parent = 21
 				position = 0.16331905126571655,-11.02778434753418,3.0874361991882324
@@ -5362,6 +5519,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5418,6 +5576,7 @@ GAME
 				cid = 4294677614
 				uid = 3792128745
 				mid = 325139766
+				persistentId = 818027548
 				launchID = 4
 				parent = 3
 				position = 2.1459424495697021,-12.711899757385254,1.2389603853225708
@@ -5446,6 +5605,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5490,6 +5650,7 @@ GAME
 				cid = 4294667912
 				uid = 4200662416
 				mid = 325139766
+				persistentId = 3483817764
 				launchID = 4
 				parent = 23
 				position = 2.7554593086242676,-11.02778434753418,1.4022802114486694
@@ -5516,6 +5677,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5572,6 +5734,7 @@ GAME
 				cid = 4294677574
 				uid = 867472710
 				mid = 325139766
+				persistentId = 2502041448
 				launchID = 4
 				parent = 3
 				position = 2.1459426879882813,-12.711899757385254,-1.2389606237411499
@@ -5600,6 +5763,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5644,6 +5808,7 @@ GAME
 				cid = 4294667816
 				uid = 3820561537
 				mid = 325139766
+				persistentId = 1908542855
 				launchID = 4
 				parent = 25
 				position = 2.5921394824981689,-11.02778434753418,-1.6851571798324585
@@ -5670,6 +5835,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5726,6 +5892,7 @@ GAME
 				cid = 4294677534
 				uid = 936404070
 				mid = 325139766
+				persistentId = 3438096615
 				launchID = 4
 				parent = 3
 				position = 5.3411349654197693E-07,-12.711899757385254,-2.4779210090637207
@@ -5754,6 +5921,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5798,6 +5966,7 @@ GAME
 				cid = 4294667720
 				uid = 1503112839
 				mid = 325139766
+				persistentId = 761795345
 				launchID = 4
 				parent = 27
 				position = -0.1633182168006897,-11.02778434753418,-3.0874361991882324
@@ -5824,6 +5993,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5880,6 +6050,7 @@ GAME
 				cid = 4294544986
 				uid = 3104456706
 				mid = 325139766
+				persistentId = 1096148185
 				launchID = 4
 				parent = 1
 				position = -1.5898722410202026,-2.3620223999023438,9.4994902610778809E-08
@@ -5906,6 +6077,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -5962,6 +6134,7 @@ GAME
 				cid = 4294533850
 				uid = 3231382290
 				mid = 325139766
+				persistentId = 2506373334
 				launchID = 4
 				parent = 1
 				position = -0.79493606090545654,-2.3620223999023438,1.376869797706604
@@ -5988,6 +6161,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6044,6 +6218,7 @@ GAME
 				cid = 4294533754
 				uid = 523487729
 				mid = 325139766
+				persistentId = 192236671
 				launchID = 4
 				parent = 1
 				position = 0.7949364185333252,-2.3620223999023438,1.3768696784973145
@@ -6070,6 +6245,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6126,6 +6302,7 @@ GAME
 				cid = 4294533658
 				uid = 2626940865
 				mid = 325139766
+				persistentId = 3271669014
 				launchID = 4
 				parent = 1
 				position = 1.5898722410202026,-2.3620223999023438,-2.3469328880310059E-07
@@ -6152,6 +6329,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6208,6 +6386,7 @@ GAME
 				cid = 4294533562
 				uid = 2267581957
 				mid = 325139766
+				persistentId = 3370188051
 				launchID = 4
 				parent = 1
 				position = 0.79493606090545654,-2.3620223999023438,-1.3768699169158936
@@ -6234,6 +6413,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6290,6 +6470,7 @@ GAME
 				cid = 4294533466
 				uid = 2357289612
 				mid = 325139766
+				persistentId = 438404327
 				launchID = 4
 				parent = 1
 				position = -0.79493600130081177,-2.3620223999023438,-1.3768699169158936
@@ -6316,6 +6497,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6422,16 +6604,21 @@ GAME
 		VESSEL
 		{
 			pid = 031ce282afd94164b418a6861b59cea2
+			persistentId = 2836900515
 			name = voyager-mk3-1
 			type = Ship
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 1813771.6053635562
 			lct = 3825202.2893705443
 			lastUT = 5638973.8947341004
+			distanceTraveled = 0
 			root = 0
 			lat = -0.0084246516051659399
 			lon = -78.641921871066387
@@ -6444,6 +6631,8 @@ GAME
 			prst = False
 			ref = 3026251333
 			ctrl = True
+			PQSMin = 0
+			PQSMax = 0
 			cPch = 1.313999
 			cHdg = 9.340015
 			cMod = 0
@@ -6464,6 +6653,7 @@ GAME
 				cid = 4294774652
 				uid = 3026251333
 				mid = 1414133898
+				persistentId = 1086301248
 				launchID = 5
 				parent = 0
 				position = 0,0,0
@@ -6487,6 +6677,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6765,6 +6956,7 @@ GAME
 				cid = 4294714004
 				uid = 1174694996
 				mid = 1414133898
+				persistentId = 1453199706
 				launchID = 5
 				parent = 0
 				position = 0,1.1931896209716797,0
@@ -6788,6 +6980,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6871,6 +7064,7 @@ GAME
 				cid = 4294700960
 				uid = 2594101643
 				mid = 1414133898
+				persistentId = 2947131779
 				launchID = 5
 				parent = 0
 				position = 0,-0.72924041748046875,0
@@ -6894,6 +7088,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -6951,6 +7146,7 @@ GAME
 				cid = 4294568912
 				uid = 2604130960
 				mid = 1414133898
+				persistentId = 3546619831
 				launchID = 5
 				parent = 2
 				position = 0,-1.0892410278320313,0
@@ -6974,6 +7170,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7007,6 +7204,7 @@ GAME
 				cid = 4294619178
 				uid = 2420363600
 				mid = 1414133898
+				persistentId = 1440813361
 				launchID = 5
 				parent = 3
 				position = 0,-1.3142414093017578,0
@@ -7030,6 +7228,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7116,6 +7315,7 @@ GAME
 				cid = 4294731886
 				uid = 1272957535
 				mid = 1414133898
+				persistentId = 2091541387
 				launchID = 5
 				parent = 4
 				position = 0,-3.2892417907714844,0
@@ -7139,6 +7339,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7183,6 +7384,7 @@ GAME
 				cid = 4294729804
 				uid = 1689686721
 				mid = 1414133898
+				persistentId = 276807624
 				launchID = 5
 				parent = 5
 				position = 0,-6.1017417907714844,0
@@ -7206,6 +7408,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7250,6 +7453,7 @@ GAME
 				cid = 4294747824
 				uid = 361999372
 				mid = 1414133898
+				persistentId = 1043444910
 				launchID = 5
 				parent = 6
 				position = 0,-10.779241561889648,0
@@ -7273,6 +7477,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7317,6 +7522,7 @@ GAME
 				cid = 4294721810
 				uid = 1931671002
 				mid = 1414133898
+				persistentId = 4260684251
 				launchID = 5
 				parent = 7
 				position = 0,-16.046489715576172,0
@@ -7339,6 +7545,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7502,6 +7709,7 @@ GAME
 				cid = 4294685786
 				uid = 2192189939
 				mid = 1414133898
+				persistentId = 1371193585
 				launchID = 5
 				parent = 7
 				position = -2.1429407596588135,-9.6395158767700195,-1.2372277975082397
@@ -7529,6 +7737,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7573,6 +7782,7 @@ GAME
 				cid = 4294675266
 				uid = 1751564664
 				mid = 1414133898
+				persistentId = 4215359916
 				launchID = 5
 				parent = 9
 				position = -2.0130167007446289,-7.7858867645263672,-1.1073037385940552
@@ -7598,6 +7808,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7654,6 +7865,7 @@ GAME
 				cid = 4294683646
 				uid = 80403757
 				mid = 1414133898
+				persistentId = 3910936486
 				launchID = 5
 				parent = 7
 				position = -2.1429409980773926,-9.6395158767700195,1.237227201461792
@@ -7681,6 +7893,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7725,6 +7938,7 @@ GAME
 				cid = 4294671740
 				uid = 176383909
 				mid = 1414133898
+				persistentId = 877391442
 				launchID = 5
 				parent = 11
 				position = -1.9654614925384521,-7.7858867645263672,1.1896716356277466
@@ -7750,6 +7964,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7806,6 +8021,7 @@ GAME
 				cid = 4294683566
 				uid = 4282704311
 				mid = 1414133898
+				persistentId = 339642030
 				launchID = 5
 				parent = 7
 				position = 2.1429407596588135,-9.6395158767700195,1.2372275590896606
@@ -7833,6 +8049,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7877,6 +8094,7 @@ GAME
 				cid = 4294671548
 				uid = 870076945
 				mid = 1414133898
+				persistentId = 1704174629
 				launchID = 5
 				parent = 13
 				position = 2.0130162239074707,-7.7858867645263672,1.107303261756897
@@ -7902,6 +8120,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -7958,6 +8177,7 @@ GAME
 				cid = 4294683526
 				uid = 646464832
 				mid = 1414133898
+				persistentId = 1065756031
 				launchID = 5
 				parent = 7
 				position = 2.1429412364959717,-9.6395158767700195,-1.2372274398803711
@@ -7985,6 +8205,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8029,6 +8250,7 @@ GAME
 				cid = 4294671452
 				uid = 312888537
 				mid = 1414133898
+				persistentId = 2847062283
 				launchID = 5
 				parent = 15
 				position = 1.9654610157012939,-7.7858867645263672,-1.1896717548370361
@@ -8054,6 +8276,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8110,6 +8333,7 @@ GAME
 				cid = 4294683486
 				uid = 3465294813
 				mid = 1414133898
+				persistentId = 3131146499
 				launchID = 5
 				parent = 7
 				position = 7.0687383413314819E-07,-9.6395158767700195,-2.4744551181793213
@@ -8137,6 +8361,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8181,6 +8406,7 @@ GAME
 				cid = 4294671356
 				uid = 1543462129
 				mid = 1414133898
+				persistentId = 1137602656
 				launchID = 5
 				parent = 17
 				position = -0.04755503311753273,-7.7858867645263672,-2.2969751358032227
@@ -8206,6 +8432,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8262,6 +8489,7 @@ GAME
 				cid = 4294679034
 				uid = 519141315
 				mid = 1414133898
+				persistentId = 1869737017
 				launchID = 5
 				parent = 7
 				position = -2.1459424495697021,-13.64690113067627,-1.2389606237411499
@@ -8288,6 +8516,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8332,6 +8561,7 @@ GAME
 				cid = 4294670150
 				uid = 991456228
 				mid = 1414133898
+				persistentId = 3780271690
 				launchID = 5
 				parent = 19
 				position = -2.7554574012756348,-11.962785720825195,-1.4022798538208008
@@ -8356,6 +8586,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8412,6 +8643,7 @@ GAME
 				cid = 4294645768
 				uid = 3725098521
 				mid = 1414133898
+				persistentId = 758777704
 				launchID = 5
 				parent = 19
 				position = -2.7315132617950439,-15.118127822875977,-1.5761830806732178
@@ -8436,6 +8668,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8488,6 +8721,7 @@ GAME
 				cid = 4294677694
 				uid = 2465945784
 				mid = 1414133898
+				persistentId = 3563810030
 				launchID = 5
 				parent = 7
 				position = -2.1459426879882813,-13.64690113067627,1.2389603853225708
@@ -8514,6 +8748,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8558,6 +8793,7 @@ GAME
 				cid = 4294668104
 				uid = 3002080728
 				mid = 1414133898
+				persistentId = 1446437148
 				launchID = 5
 				parent = 22
 				position = -2.5921387672424316,-11.962785720825195,1.6851562261581421
@@ -8582,6 +8818,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8638,6 +8875,7 @@ GAME
 				cid = 4294645704
 				uid = 3964427908
 				mid = 1414133898
+				persistentId = 3906207903
 				launchID = 5
 				parent = 22
 				position = -2.7307713031768799,-15.118127822875977,1.5774683952331543
@@ -8662,6 +8900,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8714,6 +8953,7 @@ GAME
 				cid = 4294677614
 				uid = 1801701169
 				mid = 1414133898
+				persistentId = 190830073
 				launchID = 5
 				parent = 7
 				position = 2.1459424495697021,-13.64690113067627,1.2389603853225708
@@ -8740,6 +8980,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8784,6 +9025,7 @@ GAME
 				cid = 4294667912
 				uid = 2052708807
 				mid = 1414133898
+				persistentId = 1579708485
 				launchID = 5
 				parent = 25
 				position = 2.7554612159729004,-11.962785720825195,1.4022809267044067
@@ -8808,6 +9050,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8864,6 +9107,7 @@ GAME
 				cid = 4294649352
 				uid = 3346542295
 				mid = 1414133898
+				persistentId = 3912334398
 				launchID = 5
 				parent = 25
 				position = 2.7315154075622559,-15.118127822875977,1.5761840343475342
@@ -8888,6 +9132,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -8940,6 +9185,7 @@ GAME
 				cid = 4294677574
 				uid = 801369029
 				mid = 1414133898
+				persistentId = 4002666757
 				launchID = 5
 				parent = 7
 				position = 2.1459426879882813,-13.64690113067627,-1.2389606237411499
@@ -8966,6 +9212,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9010,6 +9257,7 @@ GAME
 				cid = 4294667816
 				uid = 890933776
 				mid = 1414133898
+				persistentId = 2904049331
 				launchID = 5
 				parent = 28
 				position = 2.5921406745910645,-11.962785720825195,-1.6851581335067749
@@ -9034,6 +9282,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9090,6 +9339,7 @@ GAME
 				cid = 4294645576
 				uid = 2385742526
 				mid = 1414133898
+				persistentId = 1158634930
 				launchID = 5
 				parent = 28
 				position = 2.7307729721069336,-15.118127822875977,-1.5774695873260498
@@ -9114,6 +9364,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9166,6 +9417,7 @@ GAME
 				cid = 4294550852
 				uid = 42642812
 				mid = 1414133898
+				persistentId = 2847644654
 				launchID = 5
 				parent = 6
 				position = 0,-6.0860862731933594,1.8453439474105835
@@ -9194,6 +9446,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9252,6 +9505,7 @@ GAME
 				cid = 4294547814
 				uid = 166224019
 				mid = 1414133898
+				persistentId = 2029941265
 				launchID = 5
 				parent = 6
 				position = 1.3048553466796875,-6.0860862731933594,1.3048551082611084
@@ -9280,6 +9534,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9338,6 +9593,7 @@ GAME
 				cid = 4294547758
 				uid = 1103916259
 				mid = 1414133898
+				persistentId = 3326563710
 				launchID = 5
 				parent = 6
 				position = 1.8453438282012939,-6.0860862731933594,1.0989606380462646E-07
@@ -9366,6 +9622,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9424,6 +9681,7 @@ GAME
 				cid = 4294547702
 				uid = 3311149787
 				mid = 1414133898
+				persistentId = 2673223775
 				launchID = 5
 				parent = 6
 				position = 1.3048552274703979,-6.0860862731933594,-1.3048551082611084
@@ -9452,6 +9710,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9510,6 +9769,7 @@ GAME
 				cid = 4294547646
 				uid = 3157515288
 				mid = 1414133898
+				persistentId = 297820872
 				launchID = 5
 				parent = 6
 				position = -1.6111880540847778E-07,-6.0860862731933594,-1.8453439474105835
@@ -9538,6 +9798,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9596,6 +9857,7 @@ GAME
 				cid = 4294547590
 				uid = 786289084
 				mid = 1414133898
+				persistentId = 1723415240
 				launchID = 5
 				parent = 6
 				position = -1.3048554658889771,-6.0860862731933594,-1.3048551082611084
@@ -9624,6 +9886,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9682,6 +9945,7 @@ GAME
 				cid = 4294547534
 				uid = 252107839
 				mid = 1414133898
+				persistentId = 2712921350
 				launchID = 5
 				parent = 6
 				position = -1.8453438282012939,-6.0860862731933594,1.0989606380462646E-07
@@ -9710,6 +9974,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9768,6 +10033,7 @@ GAME
 				cid = 4294547478
 				uid = 3261846285
 				mid = 1414133898
+				persistentId = 492664955
 				launchID = 5
 				parent = 6
 				position = -1.3048548698425293,-6.0860862731933594,1.3048555850982666
@@ -9796,6 +10062,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9854,6 +10121,7 @@ GAME
 				cid = 4294544986
 				uid = 1179632280
 				mid = 1414133898
+				persistentId = 2935945901
 				launchID = 5
 				parent = 5
 				position = -1.5898722410202026,-3.2970237731933594,9.4994902610778809E-08
@@ -9880,6 +10148,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -9936,6 +10205,7 @@ GAME
 				cid = 4294533850
 				uid = 2852851460
 				mid = 1414133898
+				persistentId = 1480225325
 				launchID = 5
 				parent = 5
 				position = -0.79493606090545654,-3.2970237731933594,1.376869797706604
@@ -9962,6 +10232,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10018,6 +10289,7 @@ GAME
 				cid = 4294533754
 				uid = 350555711
 				mid = 1414133898
+				persistentId = 182458059
 				launchID = 5
 				parent = 5
 				position = 0.7949364185333252,-3.2970237731933594,1.3768696784973145
@@ -10044,6 +10316,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10100,6 +10373,7 @@ GAME
 				cid = 4294533658
 				uid = 1379976735
 				mid = 1414133898
+				persistentId = 41563056
 				launchID = 5
 				parent = 5
 				position = 1.5898722410202026,-3.2970237731933594,-2.3469328880310059E-07
@@ -10126,6 +10400,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10182,6 +10457,7 @@ GAME
 				cid = 4294533562
 				uid = 645952946
 				mid = 1414133898
+				persistentId = 4290292860
 				launchID = 5
 				parent = 5
 				position = 0.79493606090545654,-3.2970237731933594,-1.3768699169158936
@@ -10208,6 +10484,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10264,6 +10541,7 @@ GAME
 				cid = 4294533466
 				uid = 880984346
 				mid = 1414133898
+				persistentId = 1948766474
 				launchID = 5
 				parent = 5
 				position = -0.79493600130081177,-3.2970237731933594,-1.3768699169158936
@@ -10290,6 +10568,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10346,6 +10625,7 @@ GAME
 				cid = 4294557114
 				uid = 3490420010
 				mid = 1414133898
+				persistentId = 1389547499
 				launchID = 5
 				parent = 5
 				position = -0.96694105863571167,-2.1990108489990234,0.96694087982177734
@@ -10374,6 +10654,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10432,6 +10713,7 @@ GAME
 				cid = 4294553866
 				uid = 653918418
 				mid = 1414133898
+				persistentId = 1916417700
 				launchID = 5
 				parent = 5
 				position = -4.0046870708465576E-08,-2.1990108489990234,1.367461085319519
@@ -10460,6 +10742,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10518,6 +10801,7 @@ GAME
 				cid = 4294553810
 				uid = 1507425726
 				mid = 1414133898
+				persistentId = 950981973
 				launchID = 5
 				parent = 5
 				position = 0.96694076061248779,-2.1990108489990234,0.96694105863571167
@@ -10546,6 +10830,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10604,6 +10889,7 @@ GAME
 				cid = 4294553754
 				uid = 3293304717
 				mid = 1414133898
+				persistentId = 3790183740
 				launchID = 5
 				parent = 5
 				position = 1.3674609661102295,-2.1990108489990234,1.8440186977386475E-07
@@ -10632,6 +10918,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10690,6 +10977,7 @@ GAME
 				cid = 4294553698
 				uid = 2284292997
 				mid = 1414133898
+				persistentId = 3630379808
 				launchID = 5
 				parent = 5
 				position = 0.96694099903106689,-2.1990108489990234,-0.96694093942642212
@@ -10718,6 +11006,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10776,6 +11065,7 @@ GAME
 				cid = 4294553642
 				uid = 535894618
 				mid = 1414133898
+				persistentId = 2139933720
 				launchID = 5
 				parent = 5
 				position = -4.6566128730773926E-08,-2.1990108489990234,-1.367461085319519
@@ -10804,6 +11094,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10862,6 +11153,7 @@ GAME
 				cid = 4294553586
 				uid = 994170044
 				mid = 1414133898
+				persistentId = 3265530033
 				launchID = 5
 				parent = 5
 				position = -0.96694087982177734,-2.1990108489990234,-0.96694093942642212
@@ -10890,6 +11182,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -10948,6 +11241,7 @@ GAME
 				cid = 4294553530
 				uid = 4179119484
 				mid = 1414133898
+				persistentId = 4173726983
 				launchID = 5
 				parent = 5
 				position = -1.367461085319519,-2.1990108489990234,2.775341272354126E-07
@@ -10976,6 +11270,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11034,6 +11329,7 @@ GAME
 				cid = 4294657702
 				uid = 870409433
 				mid = 1414133898
+				persistentId = 1172408019
 				launchID = 5
 				parent = 5
 				position = 1.5553086996078491E-07,-4.7810230255126953,-1.468498706817627
@@ -11059,6 +11355,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11092,6 +11389,7 @@ GAME
 				cid = 4294510832
 				uid = 2430055843
 				mid = 1414133898
+				persistentId = 1265814375
 				launchID = 5
 				parent = 5
 				position = -1.2717572450637817,-4.7810230255126953,0.73424941301345825
@@ -11117,6 +11415,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11150,6 +11449,7 @@ GAME
 				cid = 4294510806
 				uid = 2081016859
 				mid = 1414133898
+				persistentId = 3130314783
 				launchID = 5
 				parent = 5
 				position = -2.7008354663848877E-08,-4.7810230255126953,1.468498706817627
@@ -11175,6 +11475,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11208,6 +11509,7 @@ GAME
 				cid = 4294510780
 				uid = 4087369868
 				mid = 1414133898
+				persistentId = 682675634
 				launchID = 5
 				parent = 5
 				position = 1.2717572450637817,-4.7810230255126953,0.73424947261810303
@@ -11233,6 +11535,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11266,6 +11569,7 @@ GAME
 				cid = 4294510754
 				uid = 2412838087
 				mid = 1414133898
+				persistentId = 2961755371
 				launchID = 5
 				parent = 5
 				position = 1.2717573642730713,-4.7810230255126953,-0.7342490553855896
@@ -11291,6 +11595,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11324,6 +11629,7 @@ GAME
 				cid = 4294523370
 				uid = 1797004431
 				mid = 1414133898
+				persistentId = 1475815692
 				launchID = 5
 				parent = 5
 				position = -0.00074213230982422829,-3.6912021636962891,-1.653809666633606
@@ -11350,6 +11656,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11402,6 +11709,7 @@ GAME
 				cid = 4294510384
 				uid = 2279737087
 				mid = 1414133898
+				persistentId = 1676620187
 				launchID = 5
 				parent = 5
 				position = -1.4326121807098389,-3.6912021636962891,-0.82626211643218994
@@ -11428,6 +11736,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11480,6 +11789,7 @@ GAME
 				cid = 4294510320
 				uid = 1991228510
 				mid = 1414133898
+				persistentId = 3151910406
 				launchID = 5
 				parent = 5
 				position = -1.4318701028823853,-3.6912021636962891,0.82754772901535034
@@ -11506,6 +11816,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11558,6 +11869,7 @@ GAME
 				cid = 4294510256
 				uid = 4018439003
 				mid = 1414133898
+				persistentId = 4083405573
 				launchID = 5
 				parent = 5
 				position = 0.00074227713048458099,-3.6912021636962891,1.653809666633606
@@ -11584,6 +11896,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11636,6 +11949,7 @@ GAME
 				cid = 4294510192
 				uid = 1768203198
 				mid = 1414133898
+				persistentId = 2071834836
 				launchID = 5
 				parent = 5
 				position = 1.432612419128418,-3.6912021636962891,0.82626211643218994
@@ -11662,6 +11976,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11714,6 +12029,7 @@ GAME
 				cid = 4294510128
 				uid = 562645890
 				mid = 1414133898
+				persistentId = 12543793
 				launchID = 5
 				parent = 5
 				position = 1.4318703413009644,-3.6912021636962891,-0.82754737138748169
@@ -11740,6 +12056,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11792,6 +12109,7 @@ GAME
 				cid = 4294699812
 				uid = 2725100737
 				mid = 1414133898
+				persistentId = 994493859
 				launchID = 5
 				parent = 2
 				position = -1.0703712701797485,-0.863861083984375,1.070371150970459
@@ -11820,6 +12138,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11874,6 +12193,7 @@ GAME
 				cid = 4294699552
 				uid = 2491045419
 				mid = 1414133898
+				persistentId = 1596058925
 				launchID = 5
 				parent = 2
 				position = 1.1175870895385742E-08,-0.863861083984375,1.5137335062026978
@@ -11902,6 +12222,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -11956,6 +12277,7 @@ GAME
 				cid = 4294699516
 				uid = 3187230700
 				mid = 1414133898
+				persistentId = 3907574690
 				launchID = 5
 				parent = 2
 				position = 1.0703710317611694,-0.863861083984375,1.0703712701797485
@@ -11984,6 +12306,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12038,6 +12361,7 @@ GAME
 				cid = 4294699480
 				uid = 1388393895
 				mid = 1414133898
+				persistentId = 142844018
 				launchID = 5
 				parent = 2
 				position = 1.5137333869934082,-0.863861083984375,1.4901161193847656E-07
@@ -12066,6 +12390,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12120,6 +12445,7 @@ GAME
 				cid = 4294699444
 				uid = 571770970
 				mid = 1414133898
+				persistentId = 1153229036
 				launchID = 5
 				parent = 2
 				position = 1.070371150970459,-0.863861083984375,-1.0703712701797485
@@ -12148,6 +12474,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12202,6 +12529,7 @@ GAME
 				cid = 4294699408
 				uid = 3237208468
 				mid = 1414133898
+				persistentId = 1450374281
 				launchID = 5
 				parent = 2
 				position = -1.0710209608078003E-07,-0.863861083984375,-1.5137335062026978
@@ -12230,6 +12558,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12284,6 +12613,7 @@ GAME
 				cid = 4294699372
 				uid = 358426722
 				mid = 1414133898
+				persistentId = 1088808112
 				launchID = 5
 				parent = 2
 				position = -1.070371150970459,-0.863861083984375,-1.070371150970459
@@ -12312,6 +12642,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12366,6 +12697,7 @@ GAME
 				cid = 4294699336
 				uid = 732962238
 				mid = 1414133898
+				persistentId = 2090694559
 				launchID = 5
 				parent = 2
 				position = -1.5137335062026978,-0.863861083984375,3.6321580410003662E-07
@@ -12394,6 +12726,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12448,6 +12781,7 @@ GAME
 				cid = 4294606498
 				uid = 1341871221
 				mid = 1414133898
+				persistentId = 1011566058
 				launchID = 5
 				parent = 0
 				position = 0.6881939172744751,0.17998313903808594,0.68819379806518555
@@ -12469,6 +12803,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12574,16 +12909,21 @@ GAME
 		VESSEL
 		{
 			pid = 2fe2e3fe564646d8844f95493d54e829
+			persistentId = 533419875
 			name = Ast. KED-249
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 4464963.3071538387
 			lct = 4464963.3071538387
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = 0.56447900958914488
 			lon = -126.47310950526902
@@ -12596,6 +12936,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 48131397.99427668
@@ -12613,6 +12955,7 @@ GAME
 				cid = 0
 				uid = 822719671
 				mid = 822719671
+				persistentId = 2516806378
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -12634,6 +12977,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12668,16 +13012,21 @@ GAME
 		VESSEL
 		{
 			pid = 123a56d5df0e42f8b76267f3776a5fb9
+			persistentId = 2896800928
 			name = Ast. NGF-338
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 4465063.3071538387
 			lct = 4465063.3071538387
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = -0.12252194874503876
 			lon = -126.29049595486092
@@ -12690,6 +13039,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 68974957.008412614
@@ -12707,6 +13058,7 @@ GAME
 				cid = 0
 				uid = 955407193
 				mid = 955407193
+				persistentId = 3036864985
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -12728,6 +13080,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12762,16 +13115,21 @@ GAME
 		VESSEL
 		{
 			pid = 9496c4470f0347bda9269030260c84ec
+			persistentId = 3703106136
 			name = Ast. NVF-549
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 4466611.8537846981
 			lct = 4466611.8537846981
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = 1.7795178234686577
 			lon = -127.39371093049328
@@ -12784,6 +13142,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 14520833312.408022
@@ -12801,6 +13161,7 @@ GAME
 				cid = 0
 				uid = 1741458282
 				mid = 1741458282
+				persistentId = 3150567333
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -12822,6 +13183,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12856,16 +13218,21 @@ GAME
 		VESSEL
 		{
 			pid = 5908e48c7468481ea0e0838900edbdad
+			persistentId = 3902321684
 			name = Ast. SWE-717
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 4467185.0654546199
 			lct = 4467185.0654546199
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = -0.090486548226831151
 			lon = -98.214476125153368
@@ -12878,6 +13245,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 15915271995.800217
@@ -12895,6 +13264,7 @@ GAME
 				cid = 0
 				uid = 985535413
 				mid = 985535413
+				persistentId = 4173486276
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -12916,6 +13286,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -12950,16 +13321,21 @@ GAME
 		VESSEL
 		{
 			pid = 1effa6f5ffcd482faab1b6b57d1c621d
+			persistentId = 3032600832
 			name = Ast. VVG-437
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 4699440.326086523
 			lct = 4699440.326086523
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = -0.85640917303315833
 			lon = 58.252971566625021
@@ -12972,6 +13348,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 16041416875.6008
@@ -12989,6 +13367,7 @@ GAME
 				cid = 0
 				uid = 836430042
 				mid = 836430042
+				persistentId = 3925751512
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -13010,6 +13389,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13044,16 +13424,21 @@ GAME
 		VESSEL
 		{
 			pid = 6b089d664c2741769a563d878a0f799b
+			persistentId = 587130259
 			name = Ast. QBA-985
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 5289138.1239467151
 			lct = 5289138.1239467151
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = -0.28124986152140086
 			lon = -58.103204561984036
@@ -13066,6 +13451,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 14948314292.871021
@@ -13083,6 +13470,7 @@ GAME
 				cid = 0
 				uid = 376635492
 				mid = 376635492
+				persistentId = 2249643282
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -13104,6 +13492,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13138,16 +13527,21 @@ GAME
 		VESSEL
 		{
 			pid = 433f4e9be05c4143b9ee4311f396ceed
+			persistentId = 149863987
 			name = Ast. MWZ-702
 			type = SpaceObject
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 5292243.9979701526
 			lct = 5292243.9979701526
 			lastUT = -1
+			distanceTraveled = 0
 			root = 0
 			lat = 0.5547409060506715
 			lon = -57.82251943060389
@@ -13160,6 +13554,8 @@ GAME
 			prst = False
 			ref = 0
 			ctrl = False
+			PQSMin = 0
+			PQSMax = 0
 			ORBIT
 			{
 				SMA = 16334264964.264132
@@ -13177,6 +13573,7 @@ GAME
 				cid = 0
 				uid = 1026985698
 				mid = 1026985698
+				persistentId = 2512414413
 				launchID = 0
 				parent = 0
 				position = 0,0,0
@@ -13198,6 +13595,7 @@ GAME
 				tempExtUnexp = 0
 				expt = 0.100000001
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13232,16 +13630,21 @@ GAME
 		VESSEL
 		{
 			pid = 9d3811f372cb4f81a954f7516a8aa0f1
+			persistentId = 2045998936
 			name = Untitled Space Craft
 			type = Plane
 			sit = ORBITING
 			landed = False
+			skipGroundPositioning = False
+			vesselSpawning = False
+			launchedFrom = 
 			landedAt = 
 			displaylandedAt = 
 			splashed = False
 			met = 804.08480491209775
 			lct = 5639234.4547282765
 			lastUT = 5640038.5395331886
+			distanceTraveled = 0
 			root = 0
 			lat = -0.090752491720148099
 			lon = -80.680226598417903
@@ -13254,6 +13657,8 @@ GAME
 			prst = False
 			ref = 4160314688
 			ctrl = True
+			PQSMin = 0
+			PQSMax = 0
 			cPch = -0.6582419
 			cHdg = -4.026787
 			cMod = 0
@@ -13274,6 +13679,7 @@ GAME
 				cid = 4294762296
 				uid = 4160314688
 				mid = 2735556038
+				persistentId = 4031874806
 				launchID = 6
 				parent = 0
 				position = 0,0,0
@@ -13297,6 +13703,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13533,6 +13940,7 @@ GAME
 				cid = 4294751526
 				uid = 1802029271
 				mid = 2735556038
+				persistentId = 907999330
 				launchID = 6
 				parent = 0
 				position = 0,-2.8125,0
@@ -13556,6 +13964,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13600,6 +14009,7 @@ GAME
 				cid = 4294717222
 				uid = 3489668747
 				mid = 2735556038
+				persistentId = 3708896761
 				launchID = 6
 				parent = 1
 				position = 0,-5.6018257141113281,0
@@ -13623,6 +14033,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 1
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13746,6 +14157,7 @@ GAME
 				cid = 4294747972
 				uid = 452249964
 				mid = 2735556038
+				persistentId = 314446923
 				launchID = 6
 				parent = 0
 				position = 0,1.8500003814697266,0
@@ -13769,6 +14181,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13813,6 +14226,7 @@ GAME
 				cid = 4294737876
 				uid = 2839963857
 				mid = 2735556038
+				persistentId = 980368801
 				launchID = 6
 				parent = 3
 				position = 0,3.4406909942626953,0
@@ -13835,6 +14249,7 @@ GAME
 				tempExtUnexp = 4
 				expt = 0.5
 				state = 0
+				PreFailState = 0
 				attached = True
 				autostrutMode = Off
 				rigidAttachment = False
@@ -13919,6 +14334,632 @@ GAME
 				}
 			}
 		}
+		VESSEL
+		{
+			pid = 4994d56a1bc149618d0101d34023cd1b
+			persistentId = 1251262000
+			name = Untitled Space Craft
+			type = Ship
+			sit = PRELAUNCH
+			landed = True
+			skipGroundPositioning = True
+			vesselSpawning = True
+			launchedFrom = LaunchPad
+			landedAt = LaunchPad
+			displaylandedAt = LaunchPad
+			splashed = False
+			met = 0
+			lct = 5641621.5445660893
+			lastUT = 5641621.5445660893
+			distanceTraveled = 0
+			root = 0
+			lat = -0.097207783458816005
+			lon = -74.557682425999246
+			alt = 81.458128486759961
+			hgt = 8.84999943
+			nrm = 0.000745534897,0.999999702,0
+			rot = -0.70098871,-0.092217803,-0.0972653851,0.700464249
+			CoM = 0.000159740448,-6.57008648,2.38418579E-07
+			stg = 1
+			prst = False
+			ref = 3181185629
+			ctrl = True
+			PQSMin = 2
+			PQSMax = 10
+			cPch = 0.2
+			cHdg = 0.3
+			cMod = 0
+			ORBIT
+			{
+				SMA = 300819.80717720807
+				ECC = 0.99479845983264359
+				INC = 0.097207786806439378
+				LPE = 90.000000000000014
+				LAN = 33.142142437296968
+				MNA = -3.1415926535897887
+				EPH = 5641621.5445660893
+				REF = 1
+			}
+			PART
+			{
+				name = kv3Pod
+				cid = 4294555872
+				uid = 3181185629
+				mid = 1982413620
+				persistentId = 3218485961
+				launchID = 8
+				parent = 0
+				position = 0,0,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 0
+				sqor = 0
+				sepI = 0
+				sidx = 0
+				attm = 0
+				srfN = , -1
+				attN = top, -1
+				attN = bottom, 1
+				mass = 2.25
+				shielded = False
+				temp = 309.93257786183159
+				tempExt = 309.94369975558089
+				tempExtUnexp = 309.94261534057966
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/minimalistic
+				rTrf = kv3Pod
+				modCost = 0
+				crew = Katdun Kerman
+				crew = Danlie Kerman
+				crew = Siglock Kerman
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModuleCommand
+					isEnabled = True
+					hibernation = False
+					hibernateOnWarp = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						MakeReferenceToggle
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						HibernateToggle
+						{
+							actionGroup = None
+							active = False
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAnchoredDecoupler
+					isEnabled = True
+					ejectionForcePercent = 100
+					isDecoupled = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DecoupleAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceExperiment
+					isEnabled = True
+					Deployed = False
+					Inoperable = False
+					cooldownToGo = 0
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						DeployAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+						ResetAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleScienceContainer
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						CollectAllAction
+						{
+							actionGroup = None
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleDataTransmitter
+					isEnabled = True
+					xmitIncomplete = False
+					stagingEnabled = True
+					canComm = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						StartTransmissionAction
+						{
+							actionGroup = None
+							active = False
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleAblator
+					isEnabled = True
+					nominalAmountRecip = 0.050000000000000003
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = None
+							active = False
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleColorChanger
+					isEnabled = True
+					animState = False
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+						ToggleAction
+						{
+							actionGroup = Light
+							wasActiveBeforePartWasAdjusted = False
+						}
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleConductionMultiplier
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				MODULE
+				{
+					name = ModuleTripLogger
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					Log
+					{
+						flight = 0
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = ElectricCharge
+					amount = 50
+					maxAmount = 50
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Ablator
+					amount = 20
+					maxAmount = 20
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = Size1p5.Size1.Adapter.01
+				cid = 4294514160
+				uid = 1442137555
+				mid = 1982413620
+				persistentId = 3025393931
+				launchID = 8
+				parent = 0
+				position = 0,-1.6125001907348633,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 1
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = top, 0
+				attN = bottom, 2
+				mass = 0.375
+				shielded = False
+				temp = 309.93258511752686
+				tempExt = 310.01358558331754
+				tempExtUnexp = 310.01283943984106
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/minimalistic
+				rTrf = Size1p5.Size1.Adapter.01
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 270
+					maxAmount = 270
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 330
+					maxAmount = 330
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = Size1p5.Tank.04
+				cid = 4294507680
+				uid = 3786451990
+				mid = 1982413620
+				persistentId = 256355832
+				launchID = 8
+				parent = 1
+				position = 0,-4.4250001907348633,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 1
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = srfAttach, -1
+				attN = top, 1
+				attN = bottom, 3
+				mass = 1.125
+				shielded = False
+				temp = 309.93257780887518
+				tempExt = 309.94808600349859
+				tempExtUnexp = 309.94663587024735
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/minimalistic
+				rTrf = Size1p5.Tank.04
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				MODULE
+				{
+					name = ModulePartVariants
+					isEnabled = True
+					stagingEnabled = True
+					EVENTS
+					{
+					}
+					ACTIONS
+					{
+					}
+					UPGRADESAPPLIED
+					{
+					}
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 810
+					maxAmount = 810
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 990
+					maxAmount = 990
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			PART
+			{
+				name = Size4.EngineAdapter.01
+				cid = 4294475404
+				uid = 3864522329
+				mid = 1982413620
+				persistentId = 580724122
+				launchID = 8
+				parent = 2
+				position = 0,-7.5500001907348633,0
+				rotation = 0,0,0,1
+				mirror = 1,1,1
+				symMethod = Radial
+				istg = 0
+				resPri = 0
+				dstg = 1
+				sqor = -1
+				sepI = 0
+				sidx = -1
+				attm = 0
+				srfN = , -1
+				attN = A, -1
+				attN = B, -1
+				attN = C, -1
+				attN = D, -1
+				attN = top, 2
+				attN = bottom, -1
+				mass = 5.625
+				shielded = False
+				temp = 309.93257775733207
+				tempExt = 309.95099271666879
+				tempExtUnexp = 309.94926665106885
+				expt = 0.5
+				state = 0
+				PreFailState = 0
+				attached = True
+				autostrutMode = Off
+				rigidAttachment = False
+				flag = Squad/Flags/minimalistic
+				rTrf = Size4.EngineAdapter.01
+				modCost = 0
+				EVENTS
+				{
+				}
+				ACTIONS
+				{
+				}
+				PARTDATA
+				{
+				}
+				RESOURCE
+				{
+					name = LiquidFuel
+					amount = 4050
+					maxAmount = 4050
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+				RESOURCE
+				{
+					name = Oxidizer
+					amount = 4950
+					maxAmount = 4950
+					flowState = True
+					isTweakable = True
+					hideFlow = False
+					isVisible = True
+					flowMode = Both
+				}
+			}
+			ACTIONGROUPS
+			{
+				Stage = False, 0
+				Gear = False, 0
+				Light = False, 0
+				RCS = False, 0
+				SAS = False, 0
+				Brakes = False, 0
+				Abort = False, 0
+				Custom01 = False, 0
+				Custom02 = False, 0
+				Custom03 = False, 0
+				Custom04 = False, 0
+				Custom05 = False, 0
+				Custom06 = False, 0
+				Custom07 = False, 0
+				Custom08 = False, 0
+				Custom09 = False, 0
+				Custom10 = False, 0
+			}
+			DISCOVERY
+			{
+				state = -1
+				lastObservedTime = 0
+				lifetime = Infinity
+				refTime = Infinity
+				size = 2
+			}
+			FLIGHTPLAN
+			{
+			}
+			CTRLSTATE
+			{
+				pitch = 0
+				yaw = 0
+				roll = 0
+				trimPitch = 0
+				trimYaw = 0
+				trimRoll = 0
+				mainThrottle = 0
+			}
+			VESSELMODULES
+			{
+				FlightIntegrator
+				{
+				}
+				CommNetVessel
+				{
+					controlState = KerbalFull
+					canComm = True
+				}
+			}
+		}
 	}
 	LoaderInfo
 	{
@@ -13957,6 +14998,8 @@ GAME
 			ToD = 2145.8000000000006
 			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -13989,6 +15032,8 @@ GAME
 			ToD = 0
 			idx = 1
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 1
@@ -14028,6 +15073,8 @@ GAME
 			ToD = 0
 			idx = 1
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 1
@@ -14062,6 +15109,8 @@ GAME
 			ToD = 0
 			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 1
@@ -14105,6 +15154,8 @@ GAME
 			ToD = 3894587.5354276076
 			idx = 1
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14136,6 +15187,8 @@ GAME
 			ToD = 3990951.8397794142
 			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14167,6 +15220,8 @@ GAME
 			ToD = 4009878.3923612013
 			idx = 2
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14198,6 +15253,8 @@ GAME
 			ToD = 3988476.8260465041
 			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14229,6 +15286,8 @@ GAME
 			ToD = 5648785.3645668365
 			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 1
@@ -14252,14 +15311,16 @@ GAME
 			badS = False
 			veteran = False
 			tour = False
-			state = Available
+			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
 			outDueToG = False
 			ToD = 3963540.0996671095
-			idx = -1
+			idx = 0
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14280,14 +15341,16 @@ GAME
 			badS = False
 			veteran = False
 			tour = False
-			state = Available
+			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
 			outDueToG = False
 			ToD = 3969624.4105801955
-			idx = -1
+			idx = 1
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0
@@ -14308,14 +15371,16 @@ GAME
 			badS = True
 			veteran = False
 			tour = False
-			state = Available
+			state = Assigned
 			inactive = False
 			inactiveTimeEnd = 0
 			gExperienced = 0
 			outDueToG = False
 			ToD = 4018094.2431912795
-			idx = -1
+			idx = 2
 			extraXP = 0
+			suit = Default
+			hero = False
 			CAREER_LOG
 			{
 				flight = 0

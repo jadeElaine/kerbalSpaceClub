@@ -1,0 +1,773 @@
+MISSION
+{
+	id = 836ce76e-8cbb-42d3-80cb-ebff274f5bff
+	title = #autoLOC_9990010 	//#autoLOC_9990010 = Intermediate Tutorial
+	briefing = #autoLOC_9990011	//#autoLOC_9990011 = Welcome back! We’ll use this tutorial to build on what we learned in the last one and start introducing some more advanced techniques!
+	packName = squad_MakingHistory_Tutorial
+	isBriefingSet = True
+	seed = 2125087805
+	flag = Squad/Flags/default
+	bannerMenu = 
+	bannerSuccess = 
+	bannerFail = 
+	currentScore = 0
+	exportName = Mission-IntermediateTutorialBase
+	isStarted = False
+	isEnded = False
+	briefingNodeActive = False
+	SITUATION
+	{
+		version = 1.3.1
+		startType = VAB
+		startVessel = 1338209837
+		autoGenerateCrew = False
+		startUT = 0
+		filterType = unavailableParts
+		resourceSeed = 1112767330
+		showBriefing = False
+		instructorName = Instructor_Gene
+		ROSTER
+		{
+			KERBAL
+			{
+				name = Jebediah Kerman
+				gender = Male
+				type = Crew
+				trait = Pilot
+				brave = 0.5
+				dumb = 0.5
+				badS = True
+				veteran = True
+				tour = False
+				state = Available
+				inactive = False
+				inactiveTimeEnd = 0
+				gExperienced = 0
+				outDueToG = False
+				ToD = 0
+				idx = -1
+				extraXP = 0
+				suit = Default
+				hero = True
+				CAREER_LOG
+				{
+					flight = 0
+					0 = Training5,Kerbin
+				}
+				FLIGHT_LOG
+				{
+					flight = 0
+				}
+			}
+			KERBAL
+			{
+				name = Bill Kerman
+				gender = Male
+				type = Crew
+				trait = Engineer
+				brave = 0.5
+				dumb = 0.800000012
+				badS = False
+				veteran = True
+				tour = False
+				state = Available
+				inactive = False
+				inactiveTimeEnd = 0
+				gExperienced = 0
+				outDueToG = False
+				ToD = 0
+				idx = -1
+				extraXP = 0
+				suit = Default
+				hero = True
+				CAREER_LOG
+				{
+					flight = 0
+					0 = Training5,Kerbin
+				}
+				FLIGHT_LOG
+				{
+					flight = 0
+				}
+			}
+			KERBAL
+			{
+				name = Bob Kerman
+				gender = Male
+				type = Crew
+				trait = Scientist
+				brave = 0.300000012
+				dumb = 0.100000001
+				badS = False
+				veteran = True
+				tour = False
+				state = Available
+				inactive = False
+				inactiveTimeEnd = 0
+				gExperienced = 0
+				outDueToG = False
+				ToD = 0
+				idx = -1
+				extraXP = 0
+				suit = Default
+				hero = True
+				CAREER_LOG
+				{
+					flight = 0
+					0 = Training5,Kerbin
+				}
+				FLIGHT_LOG
+				{
+					flight = 0
+				}
+			}
+			KERBAL
+			{
+				name = Valentina Kerman
+				gender = Female
+				type = Crew
+				trait = Pilot
+				brave = 0.550000012
+				dumb = 0.400000006
+				badS = True
+				veteran = True
+				tour = False
+				state = Available
+				inactive = False
+				inactiveTimeEnd = 0
+				gExperienced = 0
+				outDueToG = False
+				ToD = 0
+				idx = -1
+				extraXP = 0
+				suit = Default
+				hero = True
+				CAREER_LOG
+				{
+					flight = 0
+					0 = Training5,Kerbin
+				}
+				FLIGHT_LOG
+				{
+					flight = 0
+				}
+			}
+		}
+		PARAMETERS
+		{
+			preset = Normal
+			FLIGHT
+			{
+				CanQuickSave = True
+				CanQuickLoad = True
+				CanAutoSave = True
+				CanUseMap = True
+				CanSwitchVesselsNear = True
+				CanSwitchVesselsFar = True
+				CanTimeWarpHigh = True
+				CanTimeWarpLow = True
+				CanEVA = True
+				CanIVA = True
+				CanBoard = True
+				CanRestart = True
+				CanLeaveToEditor = True
+				CanLeaveToTrackingStation = True
+				CanLeaveToSpaceCenter = True
+				CanLeaveToMainMenu = True
+			}
+			EDITOR
+			{
+				CanSave = True
+				CanLoad = True
+				CanStartNew = True
+				CanLaunch = True
+				CanLeaveToSpaceCenter = True
+				CanLeaveToMainMenu = False
+				startUpMode = 0
+				craftFileToLoad = 
+			}
+			TRACKINGSTATION
+			{
+				CanFlyVessel = True
+				CanAbortVessel = True
+				CanLeaveToSpaceCenter = True
+				CanLeaveToMainMenu = False
+			}
+			SPACECENTER
+			{
+				CanGoInVAB = True
+				CanGoInSPH = True
+				CanGoInTrackingStation = True
+				CanLaunchAtPad = True
+				CanLaunchAtRunway = True
+				CanGoToAdmin = False
+				CanGoToAstronautC = True
+				CanGoToMissionControl = False
+				CanGoToRnD = False
+				CanSelectFlag = True
+				CanLeaveToMainMenu = True
+			}
+			DIFFICULTY
+			{
+				AutoHireCrews = False
+				MissingCrewsRespawn = True
+				RespawnTimer = 7200
+				BypassEntryPurchaseAfterResearch = True
+				AllowStockVessels = False
+				IndestructibleFacilities = False
+				ResourceAbundance = 1
+				ReentryHeatScale = 1
+				EnableCommNet = True
+				AllowOtherLaunchSites = False
+			}
+			CAREER
+			{
+				TechTreeUrl = GameData/Squad/Resources/TechTree.cfg
+				StartingFunds = 25000
+				StartingScience = 0
+				StartingReputation = 0
+				FundsGainMultiplier = 1
+				RepGainMultiplier = 1
+				ScienceGainMultiplier = 1
+				FundsLossMultiplier = 1
+				RepLossMultiplier = 1
+				RepLossDeclined = 1
+			}
+			MissionParamsGeneral
+			{
+				enableFunding = True
+				startingFunds = 100000
+				spacer = 
+				enableKerbalLevels = True
+				kerbalLevelPilot = 5
+				kerbalLevelScientist = 5
+				kerbalLevelEngineer = 5
+			}
+			MissionParamsFacilities
+			{
+				facilityLevelAdmin = 3
+				facilityLevelAC = 3
+				facilityLevelLaunchpad = 3
+				facilityLevelMC = 3
+				facilityLevelRD = 3
+				facilityLevelRunway = 3
+				facilityLevelSPH = 3
+				facilityLevelTS = 3
+				facilityLevelVAB = 3
+			}
+			MissionParamsExtras
+			{
+				facilityOpenAC = False
+				astronautHiresAreFree = True
+				spacer = 
+				facilityOpenEditor = False
+				launchSitesOpen = False
+				spacer2 = 
+				cheatsEnabled = False
+			}
+			CommNetParams
+			{
+				requireSignalForControl = False
+				plasmaBlackout = False
+				rangeModifier = 1
+				DSNModifier = 1
+				occlusionMultiplierVac = 0.9
+				occlusionMultiplierAtm = 0.75
+				enableGroundStations = True
+			}
+			AdvancedParams
+			{
+				EnableKerbalExperience = True
+				ImmediateLevelUp = False
+				AllowNegativeCurrency = False
+				PressurePartLimits = False
+				GPartLimits = False
+				GKerbalLimits = False
+				KerbalGToleranceMult = 1
+				ResourceTransferObeyCrossfeed = False
+				ActionGroupsAlways = False
+				BuildingImpactDamageMult = 0.05
+				PartUpgradesInSandbox = False
+				PartUpgradesInCareer = True
+				PartUpgradesInMission = False
+			}
+		}
+		SAP_PARAMETERS
+		{
+			parametersDisplayedInSAP = startUT
+			parametersDisplayedInSAP = partFilter
+			parametersDisplayedInSAP = autoGenerateCrew
+			parametersDisplayedInSAP = gameParameters
+			parametersDisplayedInSAP = resourceSeed
+		}
+	}
+	SCOREMODULES
+	{
+	}
+	AWARDMODULES
+	{
+		AWARDMODULE
+		{
+			name = AwardModule_MissionTime
+			id = 173
+			awardID = MissionTime
+			enabled = False
+			score = 0
+			missionTime = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_Fuel
+			id = 174
+			awardID = Fuel
+			enabled = False
+			score = 0
+			resourceName = LiquidFuel
+			resourceAmount = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_KerbalsSurvived
+			id = 175
+			awardID = KerbalsSurvived
+			enabled = False
+			score = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_KerbalsDied
+			id = 176
+			awardID = KerbalsDied
+			enabled = False
+			score = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_TraveledLessThan
+			id = 177
+			awardID = TraveledLessThan
+			enabled = False
+			score = 0
+			distance = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_TraveledMoreThan
+			id = 178
+			awardID = TraveledMoreThan
+			enabled = False
+			score = 0
+			distance = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_VesselsUsed
+			id = 179
+			awardID = VesselsUsed
+			enabled = False
+			score = 0
+			vesselsUsed = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_LandedOn
+			id = 180
+			awardID = LandedOn
+			enabled = False
+			score = 0
+			vesselID = 0
+			distance = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_PlanetsLanded
+			id = 181
+			awardID = PlanetsLanded
+			enabled = False
+			score = 0
+			planetsLanded = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_Score
+			id = 182
+			awardID = BronzeAward
+			enabled = True
+			score = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_Score
+			id = 183
+			awardID = SilverAward
+			enabled = True
+			score = 0
+		}
+		AWARDMODULE
+		{
+			name = AwardModule_Score
+			id = 184
+			awardID = GoldAward
+			enabled = True
+			score = 0
+		}
+	}
+	NODES
+	{
+		NODE
+		{
+			title = #autoLOC_8100019 	//#autoLOC_8100019 = Start Node
+			id = 13a26c26-182f-4e12-9c50-3f23efe4da17
+			description = 
+			showScreenMessage = False
+			msgTime = 5
+			editorPosition = 0,0
+			isStartNode = True
+			isEndNode = False
+			message = 
+			isObjective = False
+			isCatchAll = False
+			isEvent = False
+			activateOnceOnly = True
+			activatedUT = 0
+			isLogicNode = False
+			basicNodeSource = 
+			nodeColor = #37CA37
+			missionEndOptions = Success
+			TONODEIDS
+			{
+				nodeID = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+			}
+			NODEBODY_PARAMETERS
+			{
+				MODULE_PARAMETER
+				{
+					module = MissionSituation
+					parameter = startUT
+				}
+			}
+			DOCKEDNODEIDS
+			{
+				nodeID = 88034634-fb26-4886-a382-5e13a5dcd044
+			}
+		}
+		NODE
+		{
+			title = #autoLOC_8000028 	//#autoLOC_8000028 = Spawn Vessel
+			id = 88034634-fb26-4886-a382-5e13a5dcd044
+			description = #autoLOC_8004010	//#autoLOC_8004010 = Spawn a Vessel somewhere in the universe
+			showScreenMessage = False
+			msgTime = 5
+			editorPosition = 0,0
+			isStartNode = False
+			isEndNode = False
+			message = 
+			isObjective = False
+			isCatchAll = False
+			isEvent = False
+			activateOnceOnly = True
+			activatedUT = 0
+			isLogicNode = False
+			basicNodeSource = CreateVessel
+			nodeColor = #E19D31
+			dockParentNodeID = 13a26c26-182f-4e12-9c50-3f23efe4da17
+			missionEndOptions = Success
+			TESTGROUPS
+			{
+				TESTGROUP
+				{
+					title = 
+				}
+			}
+			ACTIONS
+			{
+				ACTIONMODULE
+				{
+					name = ActionCreateVessel
+					title = Spawn Vessel
+					parametersDisplayedInSAP = vesselSituation
+					parametersDisplayedInSAP = partFilter
+					restartOnSceneLoad = False
+					isRunning = False
+					VESSELSITUATION
+					{
+						ship = #autoLOC_8100086 	//#autoLOC_8100086 = Unnamed Vessel
+						vesselDescription = 
+						playerCreated = True
+						persistentId = 1338209837
+						craftFile = 
+						focusonSpawn = False
+						launched = False
+						readyToLaunch = False
+						autoGenerateCrew = False
+						filterType = unavailableParts
+						LOCATION
+						{
+							sit = PRELAUNCH
+							launchSite = LaunchPad
+							facility = VAB
+							brakesOn = True
+							splashed = True
+							GROUNDPOINT
+							{
+								bodyName = Kerbin
+								lat = 0.076135772723016332
+								lon = -74.667248342496094
+								alt = 0
+								hgt = 0
+								rot = 0,0,0,1
+							}
+							ORBIT
+							{
+								SMA = 700000
+								ECC = 0.0001
+								INC = 0.0001
+								LPE = 0
+								LAN = 0
+								MNA = 0
+								EPH = 0
+								REF = 1
+								editorRotation = 230.00071287128713
+							}
+						}
+						MODULES
+						{
+						}
+					}
+				}
+			}
+			NODEBODY_PARAMETERS
+			{
+				MODULE_PARAMETER
+				{
+					module = ActionCreateVessel
+					parameter = vesselSituation
+				}
+			}
+		}
+		NODE
+		{
+			title = #autoLOC_7001217 	//#autoLOC_7001217 = Orbit
+			id = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+			description = #autoLOC_8004023 	//#autoLOC_8004023 = Check a vessel orbit
+			showScreenMessage = False
+			msgTime = 5
+			editorPosition = 300,0
+			isStartNode = False
+			isEndNode = False
+			message = 
+			isObjective = True
+			isCatchAll = False
+			isEvent = False
+			activateOnceOnly = True
+			activatedUT = 0
+			isLogicNode = False
+			basicNodeSource = Orbit
+			nodeColor = #3475F0
+			missionEndOptions = Success
+			FROMNODES
+			{
+				FROMNODE
+				{
+					nodeID = 13a26c26-182f-4e12-9c50-3f23efe4da17
+					connectorColor = #FFFFFF
+				}
+			}
+			TONODEIDS
+			{
+				nodeID = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+			}
+			TESTGROUPS
+			{
+				TESTGROUP
+				{
+					title = 
+					TESTMODULE
+					{
+						name = TestOrbit
+						title = Orbit
+						parametersDisplayedInSAP = testComparison
+						parametersDisplayedInSAP = missionOrbit
+						vesselID = 0
+						comparison = FullOrbit
+						orbitTolerance = 10
+						stabilizationTime = 5
+						underThrust = False
+						ORBIT
+						{
+							SMA = 233333.33333333334
+							ECC = 0.0001
+							INC = 0.0001
+							LPE = 0
+							LAN = 0
+							MNA = 0
+							EPH = 0
+							REF = 2
+							editorRotation = 230.0008910891089
+						}
+					}
+				}
+			}
+			NODEBODY_PARAMETERS
+			{
+				MODULE_PARAMETER
+				{
+					module = TestOrbit
+					parameter = testComparison
+				}
+				MODULE_PARAMETER
+				{
+					module = TestOrbit
+					parameter = missionOrbit
+				}
+			}
+		}
+		NODE
+		{
+			title = #autoLOC_8000183 	//#autoLOC_8000183 = Landed Vessel
+			id = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+			description = #autoLOC_8004020 	//#autoLOC_8004020 = Check if a vessel is landed
+			showScreenMessage = False
+			msgTime = 5
+			editorPosition = 600,0
+			isStartNode = False
+			isEndNode = False
+			message = 
+			isObjective = True
+			isCatchAll = False
+			isEvent = False
+			activateOnceOnly = True
+			activatedUT = 0
+			isLogicNode = False
+			basicNodeSource = Landed
+			nodeColor = #3475F0
+			missionEndOptions = Success
+			FROMNODES
+			{
+				FROMNODE
+				{
+					nodeID = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+					connectorColor = #FFFFFF
+				}
+			}
+			TESTGROUPS
+			{
+				TESTGROUP
+				{
+					title = 
+					TESTMODULE
+					{
+						name = TestVesselSituationLanded
+						title = #autoLOC_8000183 	//#autoLOC_8000183 = Landed Vessel
+						parametersDisplayedInSAP = locationSituation
+						parametersDisplayedInSAP = vesselID
+						vesselID = 0
+						stabilizationTime = 1
+						locationChoice = bodyData
+						surfaceVelocity = 0.10000000149011612
+						BODYDATA
+						{
+							bodyName = Mun
+						}
+						BIOMEDATA
+						{
+							bodyName = Kerbin
+						}
+						GROUNDAREA
+						{
+							bodyName = Kerbin
+							lat = 0
+							lon = 0
+							alt = 0
+							radius = 150000
+						}
+					}
+				}
+			}
+			NODEBODY_PARAMETERS
+			{
+				MODULE_PARAMETER
+				{
+					module = TestVesselSituationLanded
+					parameter = locationSituation
+				}
+				MODULE_PARAMETER
+				{
+					module = TestVesselSituationLanded
+					parameter = vesselID
+				}
+			}
+		}
+	}
+	TAGS
+	{
+	}
+	FLOW
+	{
+		FORWARDPATHS
+		{
+			PATHINFO
+			{
+				startNodeId = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+			}
+			PATHINFO
+			{
+				startNodeId = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+				PATH
+				{
+					nodeId = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+				}
+			}
+			PATHINFO
+			{
+				startNodeId = 13a26c26-182f-4e12-9c50-3f23efe4da17
+				PATH
+				{
+					nodeId = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+					nodeId = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+				}
+			}
+		}
+		REVERSEPATHS
+		{
+			PATHINFO
+			{
+				startNodeId = 13a26c26-182f-4e12-9c50-3f23efe4da17
+			}
+			PATHINFO
+			{
+				startNodeId = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+				PATH
+				{
+					nodeId = 13a26c26-182f-4e12-9c50-3f23efe4da17
+				}
+			}
+			PATHINFO
+			{
+				startNodeId = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+				PATH
+				{
+					nodeId = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+					nodeId = 13a26c26-182f-4e12-9c50-3f23efe4da17
+				}
+			}
+		}
+		BLOCKS
+		{
+			NODE
+			{
+				id = 119a9ea1-b5ea-4a42-9544-71cf41965dcc
+			}
+			NODE
+			{
+				id = bce24f7f-17ee-497f-bf4f-81870b83fd8a
+			}
+		}
+	}
+}
+EDITOR_STATUS
+{
+	canvasPosition = 4227.50928,-4493.95508
+	zoomLevel = 1
+	canvasSize = 10000,10000
+}
